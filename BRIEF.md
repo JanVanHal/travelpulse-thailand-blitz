@@ -24,4 +24,9 @@ Template spec: /home/box/agent-data/workflows/blitz-business-site-template/SKILL
 - Do not touch Cloudflare, do not deploy, do not touch other repos. Delete nothing else. SOURCE-BRIEF.md is the original content brief, keep it.
 
 ## Fix list
-- (empty — filled after review)
+- **Header illustrations (round 1).** 14 ready-made flat cartoon WebP illustrations (1280x720, 16:9, all <200 KB, one consistent style, palette matches style.css: cream/sand/coral/teal/mustard, ink outlines; no text, logos or people) are in `img/illustrations/<page>.webp`, one per page: index, arrival, esim, visas, insurance, money, transport, apps, regions, nomads, retirees, living, tourists, 404 (file name = page name; home = index.webp). Do NOT generate or alter image files; only place them.
+  - Add one illustration to the hero of each matching page (14 pages incl. 404), below or beside the existing hero text (on desktop a two-column hero with text left/image right is fine if it looks good; on mobile image below text). It must feel like a colourful pop that fits the Blitz look: radius 2px or none, optional thin ink hairline border, max width so it never dominates the H1.
+  - `<img>` with width="1280" height="720" (no layout shift, CSS `height:auto; aspect-ratio:16/9`), `decoding="async"`, the hero image NOT lazy (it is the only image per page; use `fetchpriority="high"`), relative path `img/illustrations/x.webp`.
+  - Short descriptive alt text per image (e.g. "Cartoon illustration of a tuk-tuk, train and boat crossing Thai countryside"). Keep alt factual, no marketing copy.
+  - Do not change any text, heading, link, href, rel, target, id, or data-affiliate attribute. Do not touch the marquee content. No new external requests.
+  - Responsive 360–1440, no horizontal scroll, reduced-motion respected.
