@@ -995,13 +995,18 @@ html.js .reveal:not(.is-in):focus-within {
   .btn-roll > span:first-child { transform: none !important; }
 }
 
-/* Index hero: big uncropped illustration on desktop, no frame */
+/* Desktop hero: big uncropped illustration, no frame */
 @media (min-width: 1024px) {
-  .hero--home .hero-inner {
+  .hero-inner,
+  .vpn-intro,
+  .page-404 {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     align-items: center;
   }
-  .hero--home .hero-illu {
+
+  .hero-inner .hero-illu,
+  .vpn-intro .hero-illu,
+  .page-404 .hero-illu {
     border: 0;
     width: 100%;
     height: auto;
