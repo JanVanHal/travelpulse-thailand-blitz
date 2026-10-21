@@ -34,7 +34,7 @@ Open `http://localhost:8080/`. Relative links assume these files sit together, t
 | `404.html` | Missing URL |
 | `sitemap.xml` | Thailand URLs only, for a later merge |
 
-Shared: `styles.css` + `travelpulse.css` (copied from TravelPulse, unchanged), `thailand.css`, `thailand.js` (stay picker + checklist in `localStorage`).
+Shared: `assets/css/style.css`, `thailand.js` (stay picker, checklist in `localStorage`, menu and motion).
 
 ## Facts
 
