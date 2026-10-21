@@ -1014,3 +1014,11 @@ html.js .reveal:not(.is-in):focus-within {
     object-fit: contain;
   }
 }
+
+/* Index: decorative elephant parade above footer */
+.elephant-strip {
+  height: clamp(110px, 12vw, 170px);
+  background: var(--cream) url("../../img/illustrations/elephants-strip.webp") repeat-x left bottom / auto 100%;
+}
+.elephant-strip { margin-top: var(--section-pad); }
+.elephant-strip + .site-footer { margin-top: 0; }
