@@ -763,6 +763,21 @@ p:has(> .btn) .btn,
   border-radius: var(--radius);
 }
 
+/* Same callout as .disclaimer-box, with tip spacing instead of the page-end gap. */
+.disclaimer-box.vpn-tip {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.disclaimer-box.vpn-tip :is(p, h3) { margin-top: 0; }
+
+.tools-grid > .disclaimer-box.vpn-tip {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
 .sources { margin-top: var(--block-pad); padding-bottom: 0.5rem; }
 
 .sources h2 {
