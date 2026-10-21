@@ -72,6 +72,20 @@
     if (nav.open && window.matchMedia("(max-width: 1023px)").matches) nav.open = false;
   });
 
+  // Close Guides dropdown / mobile menu on outside click; keep aria-expanded in sync
+  document.querySelectorAll(".nav-details, .guides-details").forEach(function (d) {
+    var sum = d.querySelector(":scope > summary");
+    if (!sum) return;
+    var sync = function () { sum.setAttribute("aria-expanded", d.open ? "true" : "false"); };
+    sync();
+    d.addEventListener("toggle", sync);
+  });
+  document.addEventListener("click", function (e) {
+    var guides = document.querySelector(".guides-details");
+    if (guides && guides.open && !guides.contains(e.target)) guides.open = false;
+    if (nav && nav.open && !nav.contains(e.target)) nav.open = false;
+  });
+
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduce) {
     document.querySelectorAll("a.btn, button.btn").forEach(function (btn) {
