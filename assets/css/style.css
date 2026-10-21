@@ -994,3 +994,19 @@ html.js .reveal:not(.is-in):focus-within {
 
   .btn-roll > span:first-child { transform: none !important; }
 }
+
+/* Index hero: big illustration on desktop, no frame */
+@media (min-width: 1024px) {
+  .hero--home .hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    align-items: stretch;
+  }
+  .hero--home .hero-illu {
+    border: 0;
+    height: 100%;
+    min-height: 22rem;
+    aspect-ratio: auto;
+    object-fit: cover;
+    align-self: stretch;
+  }
+}
